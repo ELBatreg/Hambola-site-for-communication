@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "userName": "Sara Mohamed",
+      "userImage": "assets/sara.webp",
+      "postDescription": "Ever wondered what makes your favorite apps to tick ! ",
+      "postImage": "assets/image3-1.png",
+      "isLiked": true,
+      "comments": [
+        "well done",
+        "greet"
+      ],
+      "createdAt": "2024-05-20T10:00:00",
+      "editing": true
+    },
+    {
+      "id": "2",
+      "userName": "Ahmed Ali",
+      "userImage": "assets/3.webp",
+      "postDescription": "Problem Solving: Programming is like solving a puzzle. It hones your logical thinking and helps you break down complex problems into manageable pieces.",
+      "postImage": "assets/3.webp",
+      "isLiked": false,
+      "comments": [],
+      "createdAt": "2024-05-20T10:00:00",
+      "editing": false
+    },
+    {
+      "id": "3",
+      "userName": "Fatma Nasser",
+      "userImage": "assets/image1.jpeg",
+      "postDescription": "Career Opportunities: The tech world is booming! Learning to code opens doors to a vast array of exciting and well-paying jobs in various industries.🏃‍♀️💪",
+      "postImage": "assets/image1.jpeg",
+      "isLiked": true,
+      "comments": [
+        "ءءءء",
+        "fan"
+      ],
+      "createdAt": "2024-05-20T10:00:00",
+      "editing": false
+    },
+    {
+      "id": "0bbc",
+      "userName": "Ali Waeal",
+      "userImage": " assets/image3-1.png",
+      "postDescription": "Education isn’t just about one way or the usual classroom anymore. If you’re a student figuring out what to do next, a professional looking to advance your career, or just someone curious about new hobbies, there’s definitely a course out there for you.\n\n",
+      "postImage": " assets/image3-1.png",
+      "isLiked": false,
+      "comments": [],
+      "createdAt": "2025-05-23T18:47:21.161Z",
+      "editing": false
+    },
+    {
+      "id": "8a96",
+      "userName": "Sara Ali",
+      "userImage": "assets/sara.webp",
+      "postDescription": "    Discover quick and easy meals perfect for iftar and suhoor during the holy month of Ramadan.\",\n",
+      "postImage": "assets/rat.jpeg",
+      "isLiked": true,
+      "comments": [
+        "nice"
+      ],
+      "createdAt": "2025-05-24T09:24:39.955Z",
+      "editing": true
+    },
+    {
+      "id": "59aa",
+      "userName": "Asmaa Ali",
+      "userImage": "assets/sara.webp",
+      "postDescription": "\"Sara is a bright and graceful young woman with a kind heart and a smile that lights up the room. Her passion for creativity and her gentle nature make her loved by everyone around her.\"\n\n",
+      "postImage": "assets/sara.webp",
+      "isLiked": true,
+      "comments": [
+        "greet"
+      ],
+      "createdAt": "2025-05-24T13:51:32.489Z",
+      "editing": true
+    },
+    {
+      "id": "57ee",
+      "userName": "Ali Ahmed",
+      "userImage": "assets/rat.jpeg",
+      "postDescription": "this is a nice rat",
+      "postImage": "assets/rat.jpeg",
+      "isLiked": true,
+      "comments": [
+        "Really !"
+      ],
+      "createdAt": "2025-05-30T20:03:29.696Z",
+      "editing": false
+    }
+  ]
+}

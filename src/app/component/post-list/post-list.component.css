@@ -1,0 +1,113 @@
+
+.card {
+  background: linear-gradient(145deg, #161616, #1a1919)   !important;
+  border-radius: 1.5rem;
+  padding: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card .btn-outline-warning,
+.card .btn-outline-danger {
+  border: none;
+  background: white;
+  color: #ffb300;
+  transition: all 0.2s ease;
+}
+.card .btn-outline-danger {
+  color: #dc3545;
+}
+.card .btn-outline-warning:hover {
+  background-color: #ffb300;
+  color: white;
+}
+.card .btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.card img {
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25);
+}
+.card h6 {
+  font-weight: 600;
+  color: #343a40;
+}
+.card small {
+  color: #6c757d;
+}
+
+.card input,
+.card textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+.card input:focus,
+.card textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-like {
+  transition: all 0.2s ease;
+}
+.btn-like.btn-danger {
+  background-color: #ff4d6d;
+  border: none;
+}
+.btn-like.btn-outline-danger {
+  border-color: #ff4d6d;
+  color: #ff4d6d;
+}
+.btn-like:hover {
+  transform: scale(1.05);
+}
+
+.card img.img-fluid {
+  max-height: 350px;
+  border-radius: 1rem;
+  object-fit: cover;
+  border: 3px solid #dee2e6;
+}
+
+.card .list-group-item {
+  font-size: 0.9rem;
+  color: #495057;
+}
+.card .bi-chat-left-text {
+  font-size: 1rem;
+}
+
+.input-group input {
+  border-radius: 1rem 0 0 1rem;
+}
+.input-group .btn {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  border: none;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6610f2, #0d6efd);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.4);
+}
+.btn-gradient {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}

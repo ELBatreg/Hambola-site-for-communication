@@ -1,0 +1,82 @@
+<div *ngFor="let post of posts" 
+     class="card mx-auto mb-4 border-1 rounded-4 shadow-lg bg-light" 
+     style="max-width: 550px; padding: 20px; position: relative;">
+
+  <div class="position-absolute top-0 end-0 m-3 d-flex gap-2">
+    <button class="btn btn-sm btn-outline-primary rounded-circle shadow-sm" 
+            (click)="editPost(post)" title="Edit">
+      <i class="bi bi-pencil-fill text-primary"></i>
+    </button>
+    <button class="btn btn-sm btn-outline-danger rounded-circle shadow-sm" 
+            (click)="deletePost(post.id)" title="Delete">
+      <i class="bi bi-trash-fill"></i>
+    </button>
+  </div>
+
+  <div class="d-flex align-items-center mb-4">
+    <img [src]="post.userImage" alt="User" 
+         class="rounded-circle me-3 border border-3 border-primary shadow-sm" 
+         width="50" height="50">
+    <div>
+      <h6 class="mb-1 fw-semibold">{{ post.userName }}</h6>
+      <small class="text-muted">{{ post.createdAt | date: 'medium' }}</small>
+    </div>
+  </div>
+
+  <div *ngIf="post.editing; else displayMode">
+    <input [(ngModel)]="post.userName" class="form-control mb-2" placeholder="User Name" />
+    <input [(ngModel)]="post.userImage" class="form-control mb-2" placeholder="User Image URL" />
+    <textarea [(ngModel)]="post.postDescription" class="form-control mb-2" rows="3" placeholder="Post Description"></textarea>
+    <input [(ngModel)]="post.postImage" class="form-control mb-3" placeholder="Post Image URL" />
+
+    <div class="text-end">
+      <button class="btn btn-sm btn-success me-2" (click)="savePost(post)" title="Save">
+        <i class="bi bi-check-lg"></i>
+      </button>
+      <button class="btn btn-sm btn-secondary" (click)="cancelEdit(post)" title="Cancel">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  </div>
+
+  <ng-template #displayMode>
+    <p class="mb-3 text-dark lh-base">{{ post.postDescription | truncate:100 }}</p>
+    <img *ngIf="post.postImage" 
+         [src]="post.postImage" 
+         class="img-fluid rounded-3 border mb-3" 
+         style="max-height: 350px; object-fit: cover;" />
+  </ng-template>
+
+  <div class="text-end mb-3">
+    <button class="btn btn-sm px-4 py-1 rounded-pill shadow"
+            [ngClass]="post.isLiked ? 'btn-danger' : 'btn-outline-danger'"
+            (click)="toggleLike(post)">
+      <i class="bi me-1" [ngClass]="post.isLiked ? 'bi-heart-fill' : 'bi-heart'"></i>
+      {{ post.isLiked ? 'Liked' : 'Like' }}
+    </button>
+  </div>
+
+  <div class="bg-white border-top pt-3">
+    <h6 class="text-secondary mb-2">Comments</h6>
+    <ul class="list-group list-group-flush ps-1 mb-3">
+      <li *ngFor="let comment of post.comments" class="list-group-item border-0 px-0 py-1 bg-white">
+        <i class="bi bi-chat-left-text text-primary me-2"></i>{{ comment }}
+      </li>
+    </ul>
+
+    <div class="input-group input-group-sm">
+      <input [(ngModel)]="commentInputs[post.id]" type="text" class="form-control" placeholder="Add a comment..." />
+      <button class="btn btn-outline-primary" (click)="addComment(post)">
+        <i class="bi bi-send-fill"></i>
+      </button>
+    </div>
+  </div>
+
+</div>
+<a routerLink="/post-form" 
+   class="btn d-flex align-items-center gap-2 shadow-lg position-fixed px-4 py-2"
+   style="bottom: 30px; right: 30px; z-index: 1050; border-radius: 30px; background: transparent; color: #007bff; border: none;"
+   title="Add New Post">
+  <i class="bi bi-plus-circle-fill fs-5"></i>
+  <span class="fw-semibold d-none d-sm-inline">Add Post</span>
+</a>

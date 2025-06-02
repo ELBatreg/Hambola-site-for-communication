@@ -1,0 +1,41 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="card shadow p-4 mx-auto" style="max-width: 500px;">
+  <h5 class="mb-3 text-primary fw-bold text-center">Add New Post</h5>
+
+  <div class="mb-3">
+    <label class="form-label">User Name</label>
+    <input type="text" class="form-control" placeholder="Enter your name" formControlName="userName">
+    <div class="text-danger mt-1" *ngIf="postForm.get('userName')?.touched && postForm.get('userName')?.invalid">
+      <small *ngIf="postForm.get('userName')?.errors?.['required']">User name is required.</small>
+      <small *ngIf="postForm.get('userName')?.errors?.['minlength']">Minimum 3 characters required.</small>
+      <small *ngIf="postForm.get('userName')?.errors?.['maxlength']">Maximum 30 characters allowed.</small>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">User Image URL</label>
+    <input type="text" class="form-control" placeholder="URL to profile image" formControlName="userImage">
+    <div class="text-danger mt-1" *ngIf="postForm.get('userImage')?.touched && postForm.get('userImage')?.invalid">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Post Description</label>
+    <textarea class="form-control" rows="3" placeholder="What's on your mind?" formControlName="postDescription"></textarea>
+    <div class="text-danger mt-1" *ngIf="postForm.get('postDescription')?.touched && postForm.get('postDescription')?.invalid">
+      <small *ngIf="postForm.get('postDescription')?.errors?.['required']">Description is required.</small>
+      <small *ngIf="postForm.get('postDescription')?.errors?.['minlength']">Minimum 10 characters required.</small>
+      <small *ngIf="postForm.get('postDescription')?.errors?.['maxlength']">Maximum 500 characters allowed.</small>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Post Image URL</label>
+    <input type="text" class="form-control" placeholder="Optional image URL" formControlName="postImage">
+    <div class="text-danger mt-1" *ngIf="postForm.get('postImage')?.touched && postForm.get('postImage')?.invalid">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100" [disabled]="postForm.invalid">
+    <i class="bi bi-plus-lg me-1"></i> Add Post
+  </button>
+</form>

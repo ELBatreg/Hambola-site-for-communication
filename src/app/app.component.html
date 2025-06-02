@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<!-- <div class="container-sm my-4" style="max-width: 600px;">
+  <div *ngFor="let post of posts" class="mb-4">
+    <app-card [post]="post"></app-card>
+  </div>
+</div> -->
+
+
+<div class="container my-4">
+
+    <router-outlet></router-outlet>
+
+
+  <!--<app-post-form *ngIf="showForm" (postAdded)="onPostAdded()"></app-post-form>
+
+  <app-post-list *ngIf="!showForm"></app-post-list> -->
+
+</div>
+
+
+ <!---- <div class="text-end mb-3">
+    <button class="btn btn-outline-primary rounded-circle shadow " style="margin-right: 28%;" (click)="toggleForm()" title="Add Post  mx-0	">
+      <i class="bi" [ngClass]="showForm ? 'bi-x-lg' : 'bi-plus-lg'"></i>
+    </button>
+  </div>-->
+
+   <app-footer></app-footer>
