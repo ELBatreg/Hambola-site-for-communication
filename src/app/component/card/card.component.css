@@ -1,28 +1,32 @@
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border: 1px solid #dee2e6;
-  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  background: #f8f9fa; /* خلفية أفتح */
+  border-radius: 1rem;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .card-img-top {
   object-fit: cover;
   height: 220px;
   width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #343a40;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212529;
 }
 
 .card-text {
-  font-size: 0.95rem;
-  color: #6c757d;
+  font-size: 1rem;
+  color: #495057;
+  line-height: 1.5;
 }
